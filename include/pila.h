@@ -2,7 +2,7 @@
 #define __PILA_H__
 
 typedef struct NodoPila {
-    char dato;
+    void *dato;
     struct NodoPila* siguiente;
 } NodoPila;
 
@@ -12,7 +12,7 @@ typedef struct {
 
 Pila* crearPila();
 
-void push(Pila* p, char dato);
+void push(Pila* p, void *dato, size_t size);
 char pop(Pila* p);
 char peek(Pila* p);
 
